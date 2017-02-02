@@ -1,0 +1,144 @@
+
+#*****************************************PREFIXES********************************************************
+
+
+@prefix onto1D: 	 <http://purl.org/net/Books/> .
+@prefix rdfs: 	 <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 	 <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:    <http://purl.org/vocommons/voaf#>.
+@prefix dct:     <http://purl.org/dc/terms/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
+@prefix s:    	 <http://schema.org/>.
+@prefix gr:    	 <http://purl.org/goodrelations/v1#>.
+@prefix vcard:	 <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix geo: 	 <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix skos: 	 <http://www.w3.org/2004/02/skos/core#> .
+
+<http://purl.org/net/Books/> a owl:Ontology .
+
+
+#*****************************************END OF PREFIXES*************************************************
+
+
+#*****************************************CLASSES*********************************************************
+# CLASSES
+
+onto1D:Project
+	a rdfs:Class, owl:Class;
+	rdfs:comment	"Project class, to define a new projectd." ;
+	rdfs:label "Project"@en .
+
+#onto1D:Person 
+#	a rdfs:Class, owl:Class ;
+#	rdfs:subClassOf	 foaf:Person ;
+#	rdfs:comment	"Information about involved persons" ;
+#	rdfs:label "Person"@en .
+
+onto1D:Collections
+	a rdfs:Class, owl:Class;
+	rdfs:subClassOf	 onto1D:Project ;
+	rdfs:comment	"Collections" ;
+	rdfs:label "Collection"@en .
+
+onto1D:Series
+	a rdfs:Class, owl:Class;
+	rdfs:subClassOf	 onto1D:Collections ;
+	rdfs:comment	"Series" ;
+	rdfs:label "Series"@en .
+
+
+onto1D:HandiWork
+	a rdfs:Class, owl:Class;
+	rdfs:subClassOf	 onto1D:Series ;
+	rdfs:comment	"Handiwork could be anything ( books, comics, etc.) " ;
+	rdfs:label "HandiWork"@en .
+
+#*****************************************END OF CLASSES**************************************************
+
+#*****************************************INSTANCES*******************************************************
+#INSTANCES
+
+
+onto1D:FrenchLit
+	a onto1D:Collections ;
+	rdfs:label "FrenchLit"@en .
+
+onto1D:ForignLit
+	a onto1D:Collections ;
+	rdfs:label "ForignLit"@en .
+
+
+
+
+onto1D:Book
+	a onto1D:HandiWork ;
+	rdfs:label "Book"@en .
+
+onto1D:Magazine
+	a onto1D:HandiWork ;
+	rdfs:label "Magazine"@en .
+
+onto1D:Comics
+	a onto1D:HandiWork ;
+	rdfs:label "Comics"@en .	
+
+
+#*****************************************END OF INSTANCES************************************************
+
+
+#*****************************************PROPERTIES******************************************************
+
+# PROPERTIES
+
+onto1D:ISBN
+a	rdf:Property, owl:ObjectProperty ;
+	rdfs:label	"ISBN"@en ;
+	rdfs:comment	"ISBN of the book. " ;
+	rdfs:domain onto1D:HandiWork;
+	rdfs:range	rdfs:Literal
+	 .
+
+onto1D:TitleOfBook
+a	rdf:Property, owl:ObjectProperty ;
+	rdfs:label	"Title"@en ;
+	rdfs:comment	"Title of the book. " ;
+	rdfs:domain onto1D:HandiWork;
+	rdfs:range	rdfs:Literal
+	 .
+
+
+#*****************************************END OF PROPERTIES***********************************************
+
+
+#*****************************************INDIVIDUALS*****************************************************
+
+
+#INDIVIDUALS
+
+onto1D:HarryPotter 
+	
+	a onto1D:Project ;
+
+	 # onto1D:Collection onto1D:ForignLit ;
+	  onto1D:HandiWork onto1D:Book ;
+	  onto1D:ISBN "0553804367" ;
+	  onto1D:TitleOfBook "Harry Potter and the order of phienox" ;
+	  dct:Creator [ a foaf:Person ; foaf:name "JK rawling" ] ;
+	  dct:Publisher [ a foaf:Organization ; foaf:name "newyork times publishing home" ] ;
+
+
+	  vcard:hasAddress [
+						vcard:country-name "United kingdom" ;
+						vcard:city "London" ;
+						vcard:postal-code "53111" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Engeltalstraße" 
+					 ];	
+
+	 .
+
+
+
+#*****************************************END OF INDIVIDUALS**********************************************
