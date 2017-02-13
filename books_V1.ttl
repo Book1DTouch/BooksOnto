@@ -1,4 +1,3 @@
-
 #*****************************************PREFIXES********************************************************
 
 
@@ -37,6 +36,12 @@ onto1D:Project
 #	rdfs:label "Person"@en .
 
 onto1D:Collections
+	a rdfs:Class, owl:Class;
+	rdfs:subClassOf	 onto1D:Project ;
+	rdfs:comment	"Collections" ;
+	rdfs:label "Collection"@en .
+
+onto1D:Collectionsv2TestVocol
 	a rdfs:Class, owl:Class;
 	rdfs:subClassOf	 onto1D:Project ;
 	rdfs:comment	"Collections" ;
