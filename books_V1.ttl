@@ -24,7 +24,7 @@
 #*****************************************CLASSES*********************************************************
 # CLASSES
 
-onto1D:Project
+onto1D:Project error
 	a rdfs:Class, owl:Class;
 	rdfs:comment	"Project class, to define a new projectd." ;
 	rdfs:label "Project"@en .
@@ -40,7 +40,6 @@ onto1D:Collections
 	rdfs:subClassOf	 onto1D:Project ;
 	rdfs:comment	"Collections" ;
 	rdfs:label "Collection"@en .
-
 
 
 onto1D:Series
