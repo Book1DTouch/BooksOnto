@@ -24,7 +24,7 @@
 #*****************************************CLASSES*********************************************************
 # CLASSES
 
-onto1D:Project asdqwe
+onto1D:Project asdqwe123
 	a rdfs:Class, owl:Class;
 	rdfs:comment	"Project class, to define a new projectd." ;
 	rdfs:label "Project"@en .
