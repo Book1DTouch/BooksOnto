@@ -29,7 +29,7 @@ onto1D:Project
 	rdfs:comment	"Project class, to define a new projectd." ;
 	rdfs:label "Project"@en .
 
-#onto1D:Person a12312aa
+#onto1D:Person at12312aa
 #	a rdfs:Class, owl:Class ;
 #	rdfs:subClassOf	 foaf:Person ;
 #	rdfs:comment	"Information about involved persons" ;
