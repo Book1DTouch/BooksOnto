@@ -41,7 +41,7 @@ onto1D:Collections
 	rdfs:comment	"Collections" ;
 	rdfs:label "Collection"@en .
 
-onto1D:CollectionsTest
+onto1D:CollectionsTest2222
 	a rdfs:Class, owl:Class;
 	rdfs:subClassOf	 onto1D:Project ;
 	rdfs:comment	"Collections" ;
