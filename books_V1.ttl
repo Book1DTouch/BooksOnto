@@ -1,4 +1,4 @@
-#*****************************************PREFIXES********************************************************
+﻿#*****************************************PREFIXES********************************************************
 
 
 @prefix onto1D: 	 <http://purl.org/net/Books/> .
@@ -64,16 +64,6 @@ onto1D:HandiWork
 
 #*****************************************INSTANCES*******************************************************
 #INSTANCES
-
-
-onto1D:FrenchLit
-	a onto1D:Collections ;
-	rdfs:label "FrenchLit"@en .
-
-onto1D:ForignLit
-	a onto1D:Collections ;
-	rdfs:label "ForignLit"@en .
-
 
 
 
