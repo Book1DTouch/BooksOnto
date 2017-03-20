@@ -1,4 +1,4 @@
-#*****************************************PREFIXES********************************************************
+﻿#*****************************************PREFIXES********************************************************
 
 
 @prefix onto1D: 	 <http://purl.org/net/Books/> .
@@ -94,7 +94,7 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:range	rdfs:Literal
 	 .
 
-onto1D:TitleOfBook
+onto1D:TitleOooofBook
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"Title"@en ;
 	rdfs:comment	"Title of the book. " ;
