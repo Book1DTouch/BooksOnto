@@ -1,4 +1,4 @@
-﻿#*****************************************PREFIXES********************************************************
+#*****************************************PREFIXES********************************************************
 
 
 @prefix onto1D: 	 <http://purl.org/net/Books/> .
@@ -93,6 +93,8 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:domain onto1D:HandiWork;
 	rdfs:range	rdfs:Literal
 	 .
+
+#Edit start from here ID= Omar , asdkaj;
 
 onto1D:TitleOooofBook
 a	rdf:Property, owl:ObjectProperty ;
