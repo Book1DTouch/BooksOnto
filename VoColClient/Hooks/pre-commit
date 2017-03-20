@@ -28,8 +28,8 @@
 
             echo " ${fileContent} " > tempFileCurl.ttl
 
-            res=$(curl -X POST --data-binary @tempFileCurl.ttl  http://vocol.iais.fraunhofer.de/ontoedit/client)
-	        code="$?"
+            res=$(curl -X POST --data-binary @tempFileCurl.ttl  http://vocol.iais.fraunhofer.de/booksonto/client)
+	    code="$?"
             if [ "$code" = "6" ] || [ "$code" = "7" ]; then
                 echo "\t\033[31mConnection refused or service not available\033[0m";
                 message="See the above messages!"
