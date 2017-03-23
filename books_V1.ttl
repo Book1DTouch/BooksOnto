@@ -57,7 +57,7 @@ onto1D:HandiWork
 	rdfs:comment	"Handiwork could be anything ( books, comics, etc.) " ;
 	rdfs:label "HandiWork"@en .
 
-onto1D:HandiWork2
+onto1D:HandiWork3
 	a rdfs:Class, owl:Class;
 	rdfs:subClassOf	 onto1D:Series ;
 	rdfs:comment	"Handiwork could be anything ( books, comics, etc.) " ;
