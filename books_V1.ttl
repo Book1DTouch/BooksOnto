@@ -1,4 +1,6 @@
 #*****************************************PREFIXES********************************************************
+
+
 @prefix onto1D: 	 <http://purl.org/net/Books/> .
 @prefix rdfs: 	 <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: 	 <http://www.w3.org/2002/07/owl#> .
@@ -22,46 +24,72 @@
 # CLASSES
 
 onto1D:Project  
-	a rdfs:Class, owl:Class;
-	rdfs:comment	"Project class, to define a new projectd." ;
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf  foaf:Project ;
+	rdfs:comment	"Project class, to define a new project." ;
 	rdfs:label "Project"@en .
 
-#onto1D:Person at12312aa
-#	a rdfs:Class, owl:Class ;
-#	rdfs:subClassOf	 foaf:Person ;
-#	rdfs:comment	"Information about involved persons" ;
-#	rdfs:label "Person"@en .
+onto1D:Person 
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf	 foaf:Person ;
+	rdfs:comment	"Information about involved persons" ;
+	rdfs:label "Person"@en .
+
+onto1D:User
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf  foaf:Person ;
+	rdfs:comment	"Information about the user" ;
+	rdfs:label "User"@en .
+
+onto1D:Author
+    a rdfs:Class, owl:Class ;
+    rdfs:subClassOf onto1D:Person ;
+    rdfs:comment	"Information about a author" ;
+    rdfs:label "Author"@en .
+
+onto1D:Publisher
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf  onto1D:Person ;
+	rdfs:comment	"Information about the publisher" ;
+	rdfs:label "Publisher"@en .
+
+onto1D:Distributor
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf	onto1D:Person ;
+	rdfs:comment "Information about the distributor" ;
+	rdfs:label "Distributor"@en .
 
 onto1D:Collections
-	a rdfs:Class, owl:Class;
-	rdfs:subClassOf	 onto1D:Project ;
-	rdfs:comment	"Collections" ;
-	rdfs:label "Collection"@en .
-
-onto1D:CollectionsTest2222
-	a rdfs:Class, owl:Class;
+	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 onto1D:Project ;
 	rdfs:comment	"Collections" ;
 	rdfs:label "Collection"@en .
 
 onto1D:Series
-	a rdfs:Class, owl:Class;
+	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 onto1D:Collections ;
 	rdfs:comment	"Series" ;
 	rdfs:label "Series"@en .
 
-
 onto1D:HandiWork
-	a rdfs:Class, owl:Class;
-	rdfs:subClassOf	 onto1D:Series ;
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf  onto1D:Series ;
 	rdfs:comment	"Handiwork could be anything ( books, comics, etc.) " ;
 	rdfs:label "HandiWork"@en .
 
-onto1D:HandiWork3
-	a rdfs:Class, owl:Class;
-	rdfs:subClassOf	 onto1D:Series ;
-	rdfs:comment	"Handiwork could be anything ( books, comics, etc.) " ;
-	rdfs:label "HandiWork"@en .
+# We may have to find a class to define a Capsule
+
+onto1D:Capsule
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf  onto1D:Project ;
+	rdfs:comment "A capsule is a project made by a user and contains, playlist of books, ect." ;
+	rdfs:label "Capsule"@en .
+
+onto1D:Playlist
+    a rdfs:Class, owl:Class ;
+    rdfs:subClassOf  onto1D:Project ;
+    rdfs:comment "A playlist is a project made by a user an contains a list of books" ;
+    rdfs:label "Playlist"@en .
 
 #*****************************************END OF CLASSES**************************************************
 
@@ -100,7 +128,7 @@ a	rdf:Property, owl:ObjectProperty ;
 
 #Edit start from here ID= Omar , asdkaj;
 
-onto1D:TitleOooofBook
+onto1D:TitleOfBook
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"Title"@en ;
 	rdfs:comment	"Title of the book. " ;
