@@ -44,7 +44,7 @@ onto1D:User
 onto1D:Author
     a rdfs:Class, owl:Class ;
     rdfs:subClassOf onto1D:Person ;
-    rdfs:comment	"Information about a author" ;
+    rdfs:comment	"Information about an author" ;
     rdfs:label "Author"@en .
 
 onto1D:Publisher
@@ -125,8 +125,6 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:domain onto1D:HandiWork;
 	rdfs:range	rdfs:Literal
 	 .
-
-#Edit start from here ID= Omar , asdkaj;
 
 onto1D:TitleOfBook
 a	rdf:Property, owl:ObjectProperty ;
