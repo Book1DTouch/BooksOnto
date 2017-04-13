@@ -152,6 +152,7 @@ onto1D:HarryPotter
 	  onto1D:ISBN "0553804367" ;
 	  onto1D:TitleOfBook "Harry Potter and the order of phienox" ;
 	  dct:Creator [ a foaf:Person ; foaf:name "JK rawling" ] ;
+	  dct:Creator [ a foaf:Person ; foaf:name "JK rawling2" ] ;
 	  dct:Publisher [ a foaf:Organization ; foaf:name "newyork times publishing home" ] ;
 
 
